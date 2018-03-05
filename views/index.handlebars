@@ -1,5 +1,7 @@
 <h1>Eat-Da-Burger!</h1>
 
+<img src="/assets/images/logo.jpeg">
+
 
 <div class="row">
 	<div class="col-md-6">
@@ -9,6 +11,7 @@
 			  {{#each burgers}}
 			  	   {{#unless this.devoured}}
 				    	<p>{{this.burger_name}}<p>
+				    	<img src="/assets/images/burger.jpg">
 				    	<button class="update-burger" data-id="{{this.id}}">devour it</button>
 				  {{/unless}}    
 			  {{/each}}
@@ -22,18 +25,25 @@
 			  {{#each burgers}}
 			  	   {{#if this.devoured}}
 				    	<p>{{this.burger_name}}<p>
-				    	<button class="update-burger" data-id="{{this.id}}">devour it</button>
+				    	<img id="eaten" src="/assets/images/burger.jpg">
+				    	
 				  {{/if}}    
 			  {{/each}}
 			</ul>
 		</div>
 
 </div>
-<form class="create-form">
-	<div class="form-group">
-      <label for="usr">Name:</label>
-      <input type="text" class="form-control" id="burger_name">
-    </div>
-    <br>
-    <button type="submit" id="burger_submit" class="btn btn-danger"><h1>submit</h1></button>
-</form>
+
+<div class="row">
+	<div class="col-md-4"></div>
+	<div class="col-md-4">
+		<form class="create-form">
+			<div class="form-group">
+		      <label for="usr">Name:</label>
+		      <input type="text" class="form-control" id="burger_name">
+		    </div>
+		    <br>
+		    <button type="submit" id="burger_submit" class="btn btn-danger"><h1>submit</h1></button>
+		</form>
+	</div>
+</div>
