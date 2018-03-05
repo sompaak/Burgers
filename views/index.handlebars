@@ -6,12 +6,12 @@
 <div class="row">
 	<div class="col-md-6">
 
-		<h2>Available Burgers</h2>
+		<h3>AVAILABLE BURGERS</h3>
 		  <ul>
 			  {{#each burgers}}
 			  	   {{#unless this.devoured}}
 				    	<p>{{this.burger_name}}<p>
-				    	<img src="/assets/images/burger.jpg">
+				    	<img id="not-eaten" src="/assets/images/burger.jpg">
 				    	<button class="update-burger" data-id="{{this.id}}">devour it</button>
 				  {{/unless}}    
 			  {{/each}}
@@ -19,7 +19,7 @@
 	</div>
 	
 	<div class="col-md-6">
-		<h2> eaten burgers</h2>
+		<h3> EATEN BURGERS</h3>
 
 			<ul>
 			  {{#each burgers}}
@@ -39,11 +39,11 @@
 	<div class="col-md-4">
 		<form class="create-form">
 			<div class="form-group">
-		      <label for="usr">Name:</label>
+		      <label for="usr">INPUT A BURGER</label>
 		      <input type="text" class="form-control" id="burger_name">
 		    </div>
 		    <br>
-		    <button type="submit" id="burger_submit" class="btn btn-danger"><h1>submit</h1></button>
+		    <button type="submit" id="burger_submit" class="btn btn-danger"><h3>submit</h3></button>
 		</form>
 	</div>
 </div>
